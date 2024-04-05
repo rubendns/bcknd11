@@ -1,5 +1,5 @@
 import CustomRouter from "./custom/custom.router.js";
-import CartDao from "../services/dao/carts.dao.js"
+import CartDao from "../dao/carts.dao.js"
 import { createHash, isValidPassword, generateJWToken } from "../utils.js";
 import passport from 'passport';
 export default class UserExtendRouter extends CustomRouter {

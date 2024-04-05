@@ -1,7 +1,7 @@
-import CartDao from "../dao/carts.dao.js";
-import ProductDao from "../dao/products.dao.js";
-import UserDao from "../dao/users.dao.js";
-import TicketDao from "../dao/ticket.dao.js";
+import CartDao from "../../dao/carts.dao.js";
+import ProductDao from "../../dao/products.dao.js";
+import UserDao from "../../dao/users.dao.js";
+import TicketDao from "../../dao/ticket.dao.js";
 
 import CartRepository from "./cart.repository.js";
 import ProductRepository from "./product.repository.js";

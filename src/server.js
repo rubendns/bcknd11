@@ -19,6 +19,8 @@ import initializePassport from "./config/passport.config.js";
 import config from './config/config.js';
 import emailRouter from './routes/email.router.js';
 import { addLogger } from './middlewares/logger.middleware.js';
+import specs from './config/swagger.config.js';
+import swaggerUi from "swagger-ui-express";
 
 const app = express();
 
@@ -87,7 +89,7 @@ app.get("/loggerTest", (req, res) => {
   }
 });
 
-// Ruta main
+// Main Route
 app.use("/", viewsRouter);
 
 // Routes
@@ -99,6 +101,7 @@ app.use("/api/users", userExtRouter.getRouter());
 app.use("/api/products", productsExtRouter.getRouter());
 app.use("/api/carts", cartsExtRouter.getRouter());
 app.use("/api/email", emailRouter);
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(specs));
 app.get("/failure", (req, res) => {
   res.status(404).send("Error: Page not found");
 });

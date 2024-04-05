@@ -1,4 +1,4 @@
-import TicketDao from "../services/dao/ticket.dao.js";
+import TicketDao from "../dao/ticket.dao.js";
 const ticketDao = new TicketDao();
 
 export const createTicket = async (req, res) => {

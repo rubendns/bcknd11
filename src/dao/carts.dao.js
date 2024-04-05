@@ -1,4 +1,4 @@
-import { cartModel } from "../../models/carts.model.js";
+import { cartModel } from "../models/carts.model.js";
 import ProductDao from "./products.dao.js";
 
 const pDao = new ProductDao();
