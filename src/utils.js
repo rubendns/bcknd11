@@ -94,5 +94,13 @@ export const transporter = nodemailer.createTransport({
     pass: 'moualmufpperpiab'
   }
 });
+// Verificamos conexion con gmail
+transporter.verify(function (error, success) {
+  if (error) {
+      console.log(error);
+  } else {
+      console.log('Correct connection with the mail server!');
+  }
+})
 
 export default __dirname;
