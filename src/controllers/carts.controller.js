@@ -1,6 +1,6 @@
-import cartsService from "../services/carts.services.js";
+import cartsService from "../dao/carts.dao.js";
 import { CartDao } from "../dao/carts.dao.js";
-import { updateStockController } from "./products.controller.js";
+import { updateStock } from "./products.controller.js";
 import { createTicket } from "../controllers/tickets.controller.js";
 import { sendEmail } from "./email.controller.js";
 

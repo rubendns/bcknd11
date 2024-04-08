@@ -1,4 +1,4 @@
-import productsService from "../services/products.services.js";
+import productsService from "../dao/products.dao.js";
 
 async function getAllProducts(req, res) {
 	try {
@@ -69,7 +69,7 @@ async function deleteProduct(req, res) {
 	}
 }
 
-async function updateStockController (prod, qtty) {
+async function updateStock (prod, qtty) {
 	const productId = prod._id;
 	const actualStock = prod.stock;
 	const updatedStock = actualStock - qtty;
@@ -91,5 +91,5 @@ export {
 	createProduct,
 	updateProduct,
 	deleteProduct,
-	updateStockController
+	updateStock
 };

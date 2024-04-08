@@ -1,7 +1,7 @@
 import { UserDto } from "../services/dto/user.dto.js";
 import { userService } from "../services/repository/services.js";
 
-export const getUserProfileController = async (req, res) => {
+export const getUserProfile = async (req, res) => {
     try {
         const userId = req.params.uid;
         const userProfile = await userService.getUserById(userId);
